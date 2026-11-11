@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da velha</title>
+</head>
+<body class="conteiner">
+    <div class="mesangemERRO"></div>
+    
+    <div class="cabecalho-jogo-daVelha">
+        <h1 id="titulo">Jogo da velha</h1>
+
+        <div class="jogadores">
+            <input type="text" placeholder="Jogador 1" style="background: red;" id="jogador1">
+            <input type="text" placeholder="jogador 2" style="background: blue;" id="jogador2">
+            <button id="confirma-nomeJogador">confirma</button>
+        </div>
+    
+    </div>
+    
+    <div class="placarJogadores escondido">
+        <div class="jogadoresNOME">
+            <h2>Jogadores</h2>
+            <h3 id="jogador1NOME"></h3>
+            <h3 id="jogador2NOME"></h3>
+        </div>
+        <div class="placar">
+            <h2>Placar</h2>
+            <h3 id="placarJOgador1"></h3>
+            <h3 id="placarJOgador2"></h3>
+        </div>
+
+        <button id="restaurarTUDo">restaurar</button>
+    </div>
+
+    <div class="conteiner-jogo escondido">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>   
+    </div>
+
+    <!-- zombaria -->
+    <div class="janela">
+        <div class="zombaria">
+            <h3 id="mensagemZombaria"></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

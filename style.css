@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "fontJogo";
+    src: url("font/SpaceNova-6Rpd1.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "fontjogosimples";
+    src: url("font/VeniteAdoremus-rgRBA.ttf") format(opentype);
+}
+
+@keyframes subir{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes descer{
+    0%, 100% { transform: translateY(0);}
+    50% {transform: translateY(15px);}
+} 
+
+#titulo span {
+    display: inline-block;
+    animation: subir 1s ease-in-out infinite;
+}
+
+#titulo span:nth-child(even){
+    animation-name: descer;
+}
+
+.conteiner{
+    margin: auto;
+    background: rgb(218, 15, 15);
+}
+
+.cabecalho-jogo-daVelha{
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+}
+
+.cabecalho-jogo-daVelha h1{
+    font-family: "fontJogo", sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.conteiner-jogo{
+    margin: auto;
+    margin-top: 6rem;
+    width: 95%;
+    max-width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    box-shadow: 2rem 2rem 1rem black;
+}
+
+.conteiner-jogo button{
+    font-size: 3rem;
+    aspect-ratio: 1/1;
+    color: white;
+}
+
+.jogadores{
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.jogadores input{
+    width: 100%; 
+    box-sizing: border-box; 
+    margin: 16px 0; 
+    padding: 1rem;
+    font-size: 2rem;
+    border: 1px solid #ddd; 
+    border-radius: 14px;
+    color: white;
+}
+
+.jogadores input::placeholder{
+    color: white;
+}
+
+#confirma-nomeJogador{
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    background: green;
+    color: white;
+}
+
+.cabecalho-topo{
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.cabecalho-topo h1{
+    font-family: "fontJogo", sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.mensagem-erro{
+    border: solid red;
+    position: absolute;
+    top: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background: white;
+    font-family: "fontJogo",sans-serif;
+}
+
+/* style div placarNOMEs */
+.placarJogadores{
+    margin: auto;
+    width: 100%;
+    max-width: 29rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 1rem 1rem 1rem gray;
+}
+
+.jogadoresNOME{
+    text-align: center;
+}
+
+.jogadoresNOME h2{
+    font-family: "fontJogo", sans-serif;
+    border: solid;
+    border-right: none;
+    font-size: 6vw;
+    padding: 0.5rem;
+}
+
+.placar{
+    text-align: center;
+}
+
+.placar h2{
+    padding: 0.5rem;
+    border: solid;
+    width: 100%;
+    font-family: "fontJogo", sans-serif;
+    font-size: 6vw;
+}
+
+#jogador1NOME{
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    color: red;
+}
+
+#jogador2NOME{
+    font-size: 1.6rem;
+    color: blue;
+    margin-top: 0.5rem;
+}
+
+#placarJOgador1{
+    font-size: 1.6rem;
+    color: red;
+    margin-top: 0.5rem;
+}
+
+#placarJOgador2{
+    font-size: 1.6rem;
+    color: blue;
+    margin-top: 0.5rem;
+}
+
+.escondido{
+    display: none;
+}
+
+#restaurarTUDo{
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background: green;
+    color: white;
+    border: none;
+}
+
+/* style zombaria */
+.janela{
+    border: solid green;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;    
+    margin: auto;
+    position: absolute;
+    top: 0;
+}
+
+.zombaria{
+    width: 20rem;
+    border: solid gray;
+    border-radius: 20px;
+    padding: 0.5rem;
+    background: white;
+    position: absolute;
+    padding: 1rem;
+    top: 100%;
+    animation: subirZombaria 8s linear forwards;
+    animation-play-state: paused;
+}
+
+#mensagemZombaria{
+    font-family: "fontjogosimples",serif;
+}
+
+@keyframes subirZombaria{
+    to{transform: translateY(calc(-100vh - 100%));}
+}
+
+/* style animacoes */
+
+@keyframes butaoSubir{
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+
+@keyframes butaoDescer{
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(10);}
+}
+
+.butao-animacao{
+    display: inline-block;
+    animation: butaoSubir 1s ease-in-out infinite;
+}
+
+.butao-animacao:nth-child(even){
+    animation-name: butaoDescer;
+}
+
+@media (min-width:500px){
+    .placar h2{
+        font-size: 1.5rem;
+    }
+
+    .jogadoresNOME h2{
+        font-size: 1.5rem;
+    }
+}   
