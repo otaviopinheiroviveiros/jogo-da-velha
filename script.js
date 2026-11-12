@@ -95,6 +95,7 @@ function ganhador(vencedor){
     if(pontosJogador1 === 5 && pontosJogador2 < 2){
         const jogador = localStorage.getItem("jogador2")
         const Audiozombaria = new Audio("sons/risadas.mp3")
+        Audiozombaria.loop = true
         janela.style.display = "flex"
         Audiozombaria.play()
         divzombar.style.animationPlayState = "running"
@@ -104,7 +105,7 @@ function ganhador(vencedor){
             Audiozombaria.currentTime = 0;
             janela.style.display = "none"
             divzombar.style.animationPlayState = "paused"
-        },2000)
+        },5000)
 
     }else if(pontosJogador1 === 10 && pontosJogador2 < 5){
         const jogador = localStorage.getItem("jogador2")
@@ -125,6 +126,7 @@ function ganhador(vencedor){
     if(pontosJogador2 === 5 && pontosJogador1 < 2){
         const jogador = localStorage.getItem("jogador1")
         const Audiozombaria = new Audio("sons/risadas.mp3")
+        Audiozombaria.loop = true
         janela.style.display = "flex"
         Audiozombaria.play()
         divzombar.style.animationPlayState = "running"
@@ -134,7 +136,7 @@ function ganhador(vencedor){
             Audiozombaria.currentTime = 0;
             janela.style.display = "none"
             divzombar.style.animationPlayState = "paused"
-        },2000)
+        },5000)
 
     }else if(pontosJogador2 === 10 && pontosJogador1 < 5){
         const jogador = localStorage.getItem("jogador1")
